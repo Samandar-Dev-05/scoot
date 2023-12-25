@@ -1,9 +1,21 @@
+@font-face {
+  font-family: "Space Mono";
+  src: url("../fonts/SpaceMono-Bold.ttf");
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca-Regular.ttf");
+}
 *::after,
 *::before,
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca";
 }
 
 ul {
@@ -31,5 +43,117 @@ img {
   max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
-  width: 1200px;
+  width: 1146px;
+}
+
+.header {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-left-box {
+  display: flex;
+  gap: 58px;
+  align-items: center;
+}
+.header-img {
+  width: 108px;
+  height: 29px;
+}
+.header-icon {
+  display: none;
+}
+.header-list {
+  display: flex;
+  gap: 32px;
+}
+.header-link {
+  color: #939CAA;
+  font-family: Lexend Deca;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+.header-link:hover {
+  color: #939CAA;
+  font-family: Lexend Deca;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  opacity: 0.7;
+}
+.header-link:active {
+  color: #FCB72B;
+  font-family: Lexend Deca;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+.header-button {
+  color: #fff;
+  text-align: center;
+  font-family: Space Mono;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  padding: 14px 39px;
+  background: #FCB72B;
+  border: 3px solid transparent;
+}
+.header-button:hover {
+  color: #fff;
+  text-align: center;
+  font-family: Space Mono;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  padding: 14px 39px;
+  background: #FCB72B;
+  border: 3px solid transparent;
+  opacity: 0.7;
+}
+.header-button:active {
+  color: #FCB72B;
+  text-align: center;
+  font-family: Space Mono;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  padding: 14px 39px;
+  background: transparent;
+  border: 3px solid transparent;
+  border: 3px solid #FCB72B;
+}
+
+@media only screen and (max-width: 700px) {
+  .header-left-box {
+    width: 100%;
+    gap: 0;
+    align-items: center;
+  }
+  .header-img-link {
+    margin: 0 auto;
+  }
+  .header-img {
+    width: 75px;
+    height: 20px;
+  }
+  .header-icon {
+    order: -4;
+    display: block;
+  }
+  .header-list {
+    display: none;
+  }
+  .header-button {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
