@@ -402,6 +402,9 @@ main {
   }
 }
 @media only screen and (max-width: 980px) {
+  .card {
+    margin-top: 120px;
+  }
   .card-box {
     display: flex;
     justify-content: center;
@@ -431,6 +434,12 @@ main {
   }
 }
 @media only screen and (max-width: 680px) {
+  .card {
+    margin-top: 120px;
+  }
+  .card-list {
+    gap: 48px;
+  }
   .card-span {
     display: none;
   }
@@ -438,6 +447,13 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 24px;
+  }
+  .card-img {
+    margin-bottom: 0;
+  }
+  .card-title {
+    margin-bottom: 24px;
   }
 }
 @media only screen and (max-width: 500px) {

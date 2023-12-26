@@ -78,6 +78,7 @@
 
 @media only screen and(max-width:980px) {
     .card {
+        margin-top: 120px;
 
         &-box {
             display: flex;
@@ -115,6 +116,12 @@
 
 @media only screen and (max-width:680px) {
     .card {
+        margin-top: 120px;
+
+        &-list {
+            gap: 48px;
+        }
+
         &-span {
             display: none;
         }
@@ -123,13 +130,22 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            gap: 24px;
+        }
+
+        &-img {
+            margin-bottom: 0;
+        }
+
+        &-title {
+            margin-bottom: 24px;
         }
     }
 }
 
-@media only screen and(max-width:500px){
-    .card{
-        &-text{
+@media only screen and(max-width:500px) {
+    .card {
+        &-text {
             width: auto;
         }
     }
