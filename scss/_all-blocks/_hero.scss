@@ -1,6 +1,11 @@
+main{
+    overflow-x: hidden;
+}
+
 .hero {
     padding: 153px 0 152px 165px;
-    background: url(../assets/img/home-page-hero-bg.jpg), no-repeat;
+    background: url(../assets/img/home-page-hero-bg.jpg);
+    background-repeat: no-repeat;
 
     &-box {
         display: flex;
@@ -10,7 +15,7 @@
     &-wrapper {
         display: flex;
         flex-direction: column;
-        align-items: flex-end
+        align-items: flex-end;
     }
 
     &-title {
@@ -32,18 +37,19 @@
         position: absolute;
         left: -70%;
         top: 19%;
-        transform: translate(-19% 70%);
     }
 
     &-wrap::after{
         content: "";
         background: url(../assets/svg/hero-after-img.svg);
-        width: 447px;
+        width: 40vw;
         height: 138px;
         position: absolute;
         left: 450px;
         top: 19%;
-        transform: translate(-19% -450px)
+        transform: translate(-19% -450px);
+        overflow: hidden;
+        background-repeat: no-repeat;
     }
 
 
@@ -66,4 +72,94 @@
         @include button ($Yellow, transparent);
         border: 3px solid $Yellow;
     }
+}
+
+@media only screen and (max-width:768px){
+    .hero{
+        background: url("../assets/img/home-page-hero-bg-T.jpg");
+        padding: 137px 98px 210px;
+        &-box{
+            justify-content: center;
+        }
+
+        &-wrapper{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        &-title{
+            margin-bottom: 24px;
+            letter-spacing: -2.5px;
+        }
+
+        &-wrap::before{
+            content: "";
+            width: 450px; 
+            height: 138px;
+            background: url("../assets/svg/hero-after-img.svg");
+            left: -224px;
+            top: 110%;
+        }
+
+        &-wrap::after{
+            display: none;
+        }
+
+        &-text{
+            width: 573px;
+            margin-bottom: 32px;
+        }
+    }
+}
+
+@media only screen and(max-width:576px){
+    .hero{
+        padding: 115px auto 175px;
+       
+
+        &-title{
+            width: 83vw;
+            letter-spacing: -1.786px;
+            font-size: 40px;
+            line-height: 40px;
+        }
+
+        &-wrap::before{
+            left: -300px;
+        }
+
+        
+        &-text{
+            width: 83vw;
+            margin-bottom: 34px;
+
+        }
+    }
+}
+
+@media only screen and (max-width:460px){
+    .hero{
+        &-wrap::before{
+            left: -360px;
+        }
+    }
+}
+
+@media only screen and (max-width:375px) {
+.hero{
+    background: url("../assets/img/home-page-hero-bg-MB.jpg");
+    padding: 80px 10px 165px !important; 
+
+    &-title{
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -1px;
+    }
+
+    &-wrap::before{
+        top: 100%;
+        left: -350px;
+    }
+}
 }
