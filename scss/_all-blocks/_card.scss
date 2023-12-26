@@ -1,0 +1,136 @@
+.card {
+    margin-top: 160px;
+
+    &-box {
+        position: relative;
+    }
+
+    &-span {
+        width: 974px;
+        height: 15px;
+        background-color: $LightGrey;
+        position: absolute;
+        top: 40.5px;
+        left: -10vw;
+        z-index: -1;
+    }
+
+    &-list {
+        display: flex;
+        gap: 0 30px;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &-img {
+        margin-bottom: 40px;
+        width: 96px;
+        height: 96px;
+    }
+
+    &-title {
+        @include heading-4($DarkNavy);
+        margin-bottom: 27px;
+    }
+
+    &-text {
+        @include text($DimGrey);
+        width: 350px;
+    }
+
+}
+
+@media only screen and (max-width:1160px) {
+    .card {
+        &-span {
+            width: 890px;
+        }
+
+        &-list {
+            gap: 0 20px;
+        }
+
+        &-text {
+            width: 330px;
+        }
+    }
+}
+
+@media only screen and (max-width:1050px) {
+    .card {
+        &-span {
+            width: 800px;
+        }
+
+        &-list {
+            gap: 0 20px;
+        }
+
+        &-text {
+            width: 300px;
+        }
+    }
+}
+
+@media only screen and(max-width:980px) {
+    .card {
+
+        &-box {
+            display: flex;
+            justify-content: center;
+        }
+
+        &-span {
+            transform: rotate(90deg);
+            transform-origin: left;
+            width: 650px;
+            left: 8.5%;
+            top: -50%;
+        }
+
+        &-list {
+            position: relative;
+            flex-direction: column;
+            gap: 40px 0;
+            align-items: center;
+            width: 640px;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: row;
+            gap: 0 80px;
+            align-items: center;
+        }
+
+        &-text {
+            width: 450px;
+        }
+    }
+}
+
+@media only screen and (max-width:680px) {
+    .card {
+        &-span {
+            display: none;
+        }
+
+        &-item {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and(max-width:500px){
+    .card{
+        &-text{
+            width: auto;
+        }
+    }
+}
