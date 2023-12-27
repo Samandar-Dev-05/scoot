@@ -165,6 +165,7 @@ main {
   padding: 153px 0 152px 165px;
   background: url(../assets/img/home-page-hero-bg.jpg);
   background-repeat: no-repeat;
+  background-position: 50%;
 }
 .hero-box {
   display: flex;
@@ -333,21 +334,19 @@ main {
 .card {
   margin-top: 160px;
 }
-.card-box {
-  position: relative;
-}
 .card-span {
   width: 974px;
   height: 15px;
   background-color: #E5ECF4;
   position: absolute;
   top: 40.5px;
-  left: -10vw;
+  left: -15%;
   z-index: -1;
 }
 .card-list {
   display: flex;
   gap: 0 30px;
+  position: relative;
 }
 .card-item {
   display: flex;
@@ -781,4 +780,35 @@ main {
 }
 .footer-bottom-icon:active {
   background: #E5ECF4;
+}
+
+@media only screen and (max-width: 700px) {
+  .footer-bottom {
+    padding-top: 35px;
+    padding-bottom: 33px;
+  }
+  .footer-bottom-link-box {
+    gap: 0 32px;
+  }
+  .footer-bottom-link-list, .footer-bottom-icon-box {
+    gap: 0 20px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .footer-bottom {
+    padding-top: 64px;
+    padding-bottom: 88px;
+  }
+  .footer-bottom-box {
+    flex-direction: column;
+    gap: 65px 0;
+  }
+  .footer-bottom-link-box {
+    flex-direction: column;
+    gap: 41px 0;
+  }
+  .footer-bottom-link-list {
+    flex-direction: column;
+    gap: 16px 0;
+  }
 }/*# sourceMappingURL=main.css.map */
