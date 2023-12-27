@@ -738,4 +738,47 @@ main {
   .footer-top-title {
     width: 280px;
   }
+}
+.footer-bottom {
+  background: #333A44;
+  padding: 32px 0;
+}
+.footer-bottom-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-bottom-link-box {
+  display: flex;
+  gap: 0 60px;
+  align-items: center;
+}
+.footer-bottom-link-list {
+  display: flex;
+  gap: 0 32px;
+}
+.footer-bottom-link {
+  color: #939CAA;
+  font-family: Lexend Deca;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+.footer-bottom-link:hover {
+  opacity: 0.7;
+}
+.footer-bottom-link:active {
+  color: #FCB72B;
+}
+.footer-bottom-icon-list {
+  display: flex;
+  gap: 0 24px;
+  align-items: center;
+}
+.footer-bottom-icon:hover {
+  transform: scale(1.5);
+}
+.footer-bottom-icon:active {
+  background: #E5ECF4;
 }/*# sourceMappingURL=main.css.map */
