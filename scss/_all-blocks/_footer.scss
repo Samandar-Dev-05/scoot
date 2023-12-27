@@ -1,1 +1,103 @@
-// bu yerda footer
+.footer-top {
+    margin-top: 200px;
+    background: $DarkNavy;
+    padding: 102px 0;
+
+    &-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &-title {
+        @include heading-2($White);
+        width: 415px;
+    }
+
+    &-wrapper {
+        display: flex;
+        gap: 18px;
+    }
+
+    &-link {
+        border: 2px solid transparent;
+        border-radius: 4px;
+        background: $LightGrey;
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &-link:active {
+        opacity: 0.7;
+    }
+
+
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-link-text {
+        color: $DarkNavy;
+        font-family: Space Mono;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.446px;
+    }
+
+    &-link-title {
+        color: $DarkNavy;
+        font-family: Space Mono;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        /* 120% */
+        letter-spacing: -0.893px;
+    }
+}
+
+@media only screen and (max-width:980px) {
+    .footer-top {
+        padding: 62px auto;
+
+        &-box {
+            flex-direction: column;
+            gap: 40px;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width:540px) {
+    .footer-top {
+        padding: 88px auto;
+
+        &-title {
+            font-size: 32px;
+            line-height: 32px;
+            width: 311px;
+            letter-spacing: -1.429px;
+        }
+    }
+
+}
+
+@media only screen and (max-width:440px) {
+    .footer-top {
+        &-wrapper {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &-title {
+            width: 280px;
+        }
+    }
+}
