@@ -193,8 +193,8 @@ main {
 .hero-wrap::before {
   content: "";
   background: url(../assets/svg/hero-before-img.svg);
-  width: 232.5px;
-  height: 30px;
+  width: 202.5px;
+  height: 15px;
   position: absolute;
   left: -70%;
   top: 19%;
