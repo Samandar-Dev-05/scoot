@@ -478,6 +478,28 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+.learn-more-item-1::after, .learn-more-item-3::after {
+  content: "";
+  width: 445px;
+  height: 445px;
+  background: url("../../assets/svg/learn-more-list-BG.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  right: -45%;
+  z-index: -1;
+}
+.learn-more-item-2::before {
+  content: "";
+  width: 445px;
+  height: 445px;
+  background: url("../../assets/svg/learn-more-list-BG.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  transform: rotate(180deg);
+  left: -45%;
 }
 .learn-more-img {
   width: 445px;
@@ -599,6 +621,14 @@ main {
   .learn-more-item-1, .learn-more-item-3 {
     flex-direction: column-reverse;
   }
+  .learn-more-item-1::after, .learn-more-item-3::after {
+    top: 0;
+    right: -45%;
+  }
+  .learn-more-item-2::before {
+    right: 0;
+    left: -45%;
+  }
   .learn-more-info-box {
     display: flex;
     flex-direction: column;
@@ -608,6 +638,11 @@ main {
   .learn-more-title, .learn-more-text {
     margin-bottom: 0;
     text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .learn-more-item-1::after, .learn-more-item-2::before, .learn-more-item-3::after {
+    display: none;
   }
 }
 @media only screen and (max-width: 720px) {
@@ -652,11 +687,23 @@ main {
   margin-top: 200px;
   background: #495567;
   padding: 102px 0;
+  overflow: hidden;
 }
 .footer-top-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+.footer-top-box::after {
+  content: "";
+  width: 1153px;
+  height: 347px;
+  position: absolute;
+  background: url("../assets/svg/footer-top-BG.svg");
+  background-repeat: no-repeat;
+  right: -30%;
+  top: 42%;
 }
 .footer-top-title {
   color: #fff;
@@ -716,6 +763,15 @@ main {
     flex-direction: column;
     gap: 40px;
     text-align: center;
+  }
+  .footer-top-box::after {
+    right: -20%;
+    top: 80%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .footer-top-box::after {
+    display: none;
   }
 }
 @media only screen and (max-width: 540px) {

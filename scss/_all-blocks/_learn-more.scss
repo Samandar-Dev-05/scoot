@@ -1,6 +1,5 @@
 .learn-more {
     margin-top: 200px;
-
     &-list {
         position: relative;
         display: flex;
@@ -12,6 +11,30 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+    }
+
+    &-item-1::after,&-item-3::after{
+        content: "";
+        width: 445px;
+        height: 445px;
+        background: url("../../assets/svg/learn-more-list-BG.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        right: -45%;
+        z-index: -1;
+    }
+
+    &-item-2::before{
+        content: "";
+        width: 445px;
+        height: 445px;
+        background: url("../../assets/svg/learn-more-list-BG.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0;
+        transform: rotate(180deg);
+        left: -45%;
     }
 
     &-img {
@@ -112,6 +135,16 @@
             flex-direction: column-reverse;
         }
 
+        &-item-1::after,&-item-3::after{
+            top: 0;
+            right: -45%;
+        }
+    
+        &-item-2::before{
+            right: 0;
+            left: -45%;
+        }
+
         &-info-box{
             display: flex;
             flex-direction: column;
@@ -126,6 +159,16 @@
         }
     }
 }
+
+@media only screen and (max-width:768px){
+    .learn-more{
+        
+        &-item-1::after,&-item-2::before,&-item-3::after{
+            display: none;
+        }
+    }
+}
+
 @media only screen and (max-width:720px){
     .learn-more{
         &-img-box-1::before {
